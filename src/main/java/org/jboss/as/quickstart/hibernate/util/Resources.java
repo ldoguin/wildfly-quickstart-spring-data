@@ -70,7 +70,6 @@ public class Resources {
     }
 
     @Produces
-    @OtherQualifier
     public CouchbaseOperations createCouchbaseTemplate() throws UnknownHostException, CouchbaseException {
         CouchbaseCluster cluster = CouchbaseCluster.create();
         Bucket bucket = cluster.openBucket();

@@ -41,8 +41,8 @@ public class MemberRegistration {
     private Event<Member> memberEventSrc;
 
     public void register(Member member) throws Exception {
-//        log.info("Registering " + member.getName());
-//        memberRepository.save(member);
-//        memberEventSrc.fire(member);
+        log.info("Registering " + member.getName());
+        memberRepository.save(member);
+        memberEventSrc.fire(member);
     }
 }

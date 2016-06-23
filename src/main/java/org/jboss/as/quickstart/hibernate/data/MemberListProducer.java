@@ -37,13 +37,13 @@ public class MemberListProducer {
     @Inject
     private MemberRepository memberRepository;
 
-    private List<Member> members;
+    private Iterable<Member> members;
 
     // @Named provides access the return value via the EL variable name "members" in the UI (e.g.,
     // Facelets or JSP view)
     @Produces
     @Named
-    public List<Member> getMembers() {
+    public Iterable<Member> getMembers() {
         return members;
     }
 
@@ -53,6 +53,6 @@ public class MemberListProducer {
 
     @PostConstruct
     public void retrieveAllMembersOrderedByName() {
-        members = memberRepository.findAllOrderedByName();
+        members = memberRepository.findAll();
     }
 }

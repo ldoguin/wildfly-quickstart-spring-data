@@ -19,13 +19,9 @@ package org.jboss.as.quickstart.hibernate.data;
 import java.util.List;
 
 import org.jboss.as.quickstart.hibernate.model.Member;
-import org.jboss.as.quickstart.hibernate.util.OtherQualifier;
 import org.springframework.data.couchbase.repository.CouchbaseRepository;
 
-@OtherQualifier
 public interface MemberRepository extends CouchbaseRepository<Member, Long>{
 
     public Member findById(Long id);
-
-    public List<Member> findAllOrderedByName();
 }
