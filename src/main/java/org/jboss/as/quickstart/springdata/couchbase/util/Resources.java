@@ -14,35 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstart.hibernate.util;
+package org.jboss.as.quickstart.springdata.couchbase.util;
 
 import com.couchbase.client.core.CouchbaseException;
 import com.couchbase.client.java.Bucket;
-import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.CouchbaseCluster;
 import com.couchbase.client.java.cluster.ClusterInfo;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.couchbase.core.CouchbaseOperations;
 import org.springframework.data.couchbase.core.CouchbaseTemplate;
 
-import org.springframework.data.couchbase.config.CouchbaseBucketFactoryBean;
-import org.springframework.data.couchbase.repository.support.CouchbaseRepositoryFactory;
-
-import java.net.UnknownHostException;
-import java.util.logging.Logger;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.Dependent;
 import javax.enterprise.context.RequestScoped;
-import javax.enterprise.inject.Any;
-import javax.enterprise.inject.Default;
-import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 import javax.faces.context.FacesContext;
-import javax.persistence.EntityManager;
-import javax.persistence.OneToMany;
-import javax.persistence.PersistenceContext;
+import java.net.UnknownHostException;
+import java.util.logging.Logger;
 
 /**
  * This class uses CDI to alias Java EE resources, such as the persistence context, to CDI beans
@@ -78,3 +64,4 @@ public class Resources {
     }
 
 }
+

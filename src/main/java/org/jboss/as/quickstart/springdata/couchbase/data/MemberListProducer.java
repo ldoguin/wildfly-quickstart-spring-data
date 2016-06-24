@@ -14,9 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstart.hibernate.data;
-
-import java.util.List;
+package org.jboss.as.quickstart.springdata.couchbase.data;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -26,7 +24,8 @@ import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.jboss.as.quickstart.hibernate.model.Member;
+import org.jboss.as.quickstart.springdata.couchbase.model.Member;
+import org.springframework.data.domain.Sort;
 
 /**
  * @author Madhumita Sadhukhan
@@ -53,6 +52,6 @@ public class MemberListProducer {
 
     @PostConstruct
     public void retrieveAllMembersOrderedByName() {
-        members = memberRepository.findAll();
+        members = memberRepository.findAll(new Sort(Sort.Direction.ASC, "name"));
     }
 }

@@ -16,5 +16,5 @@
 --
 
 -- You can use this file to load seed data into the database using SQL statements
-insert into MemberHibernate4Demo (id, name, email, phone_number, address) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212', 'Boston NY') 
-insert into MemberHibernate4Demo (id, name, email, phone_number, address) values (1, 'Madhumita Sadhukhan', 'msadhukh@gmail.com', '2135551214', 'Brno CZ') 
+INSERT INTO default (KEY, VALUE) VALUES ("0", { "name": "John Smith", "email": "john.smith@mailinator.com", "phone_number": "2125551212", "address":"Boston NY","_class": "org.jboss.as.quickstart.springdata.couchbase.model.Member"}) RETURNING *
+INSERT INTO default (KEY, VALUE) VALUES ("1", { "name": "Madhumita Sadhukhan", "email": "msadhukh@gmail.com", "phone_number": "2135551214", "address":"Brno CZ","_class": "org.jboss.as.quickstart.springdata.couchbase.model.Member"}) RETURNING *

@@ -14,18 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstart.hibernate.service;
+package org.jboss.as.quickstart.springdata.couchbase.service;
 
-import com.couchbase.client.java.Bucket;
-import org.jboss.as.quickstart.hibernate.data.MemberRepository;
-import org.jboss.as.quickstart.hibernate.model.Member;
+import org.jboss.as.quickstart.springdata.couchbase.data.MemberRepository;
+import org.jboss.as.quickstart.springdata.couchbase.model.Member;
 
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
 import java.util.logging.Logger;
-import org.hibernate.Session;
 
 // The @Stateless annotation eliminates the need for manual transaction demarcation
 @Stateless

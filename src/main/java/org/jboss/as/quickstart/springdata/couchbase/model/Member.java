@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstart.hibernate.model;
+package org.jboss.as.quickstart.springdata.couchbase.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.couchbase.client.java.repository.annotation.Field;
 import com.couchbase.client.java.repository.annotation.Id;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -55,7 +55,7 @@ public class Member implements Serializable {
     @NotNull
     @Size(min = 9, max = 12)
     @Digits(fraction = 0, integer = 12)
-    @Column(name = "phone_number")
+    @Field("phone_number")
     private String phoneNumber;
 
     private String address;

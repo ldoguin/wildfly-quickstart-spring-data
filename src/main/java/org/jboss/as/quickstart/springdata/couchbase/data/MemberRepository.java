@@ -14,14 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstart.hibernate.data;
+package org.jboss.as.quickstart.springdata.couchbase.data;
 
-import java.util.List;
+import org.jboss.as.quickstart.springdata.couchbase.model.Member;
+import org.springframework.data.couchbase.repository.CouchbasePagingAndSortingRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
-import org.jboss.as.quickstart.hibernate.model.Member;
-import org.springframework.data.couchbase.repository.CouchbaseRepository;
+public interface MemberRepository extends CouchbasePagingAndSortingRepository<Member, Long> {
 
-public interface MemberRepository extends CouchbaseRepository<Member, Long>{
-
-    public Member findById(Long id);
+    Iterable<Member> findAll(Sort sort);
 }

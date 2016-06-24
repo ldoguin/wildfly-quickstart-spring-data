@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstart.hibernate.controller;
+package org.jboss.as.quickstart.springdata.couchbase.controller;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;
@@ -24,8 +24,8 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.jboss.as.quickstart.hibernate.model.Member;
-import org.jboss.as.quickstart.hibernate.service.MemberRegistration;
+import org.jboss.as.quickstart.springdata.couchbase.model.Member;
+import org.jboss.as.quickstart.springdata.couchbase.service.MemberRegistration;
 
 // The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
 // EL name
